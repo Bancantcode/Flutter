@@ -11,12 +11,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.cyan,
-        title: const Text('My Aspirations',
+        title: const Text(
+          'My Aspirations',
           style: TextStyle(
             fontFamily: 'PPFragment',
             fontSize: 30.0,
-            fontWeight: FontWeight.bold
-          )),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.cyan,
@@ -26,31 +28,51 @@ class HomePage extends StatelessWidget {
             IconButton(
               icon: const Icon(Icons.home),
               color: Colors.black,
-              onPressed: () {},  
+              onPressed: () {},
             ),
             IconButton(
               icon: const Icon(Icons.search),
               color: Colors.black,
-              onPressed: () {},  
+              onPressed: () {},
             ),
             IconButton(
               icon: const Icon(Icons.add_shopping_cart),
               color: Colors.black,
-              onPressed: () {},  
+              onPressed: () {},
             ),
             IconButton(
               icon: const Icon(Icons.account_box),
               color: Colors.black,
-              onPressed: () {},  
+              onPressed: () {},
             ),
           ],
         ),
       ),
-      body: Material(child: Center(child: Column(children: [
-        Bucket1(),
-        Bucket2(),
-        Bucket3(),
-      ],))), 
+      body: Material(
+        child: Scrollbar(
+          child: SingleChildScrollView(
+            child: Center(
+              child: Column(
+                children: [
+                  Bucket1(),
+                  Bucket2(),
+                  Bucket3(),
+                  Bucket1(),
+                  Bucket2(),
+                  Bucket3(),
+                  Bucket1(),
+                  Bucket2(),
+                  Bucket3(),
+                  Bucket1(),
+                  Bucket2(),
+                  Bucket3(),
+                  
+                ],  // Removed the extra comma here
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

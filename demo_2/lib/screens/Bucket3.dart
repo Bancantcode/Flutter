@@ -8,7 +8,7 @@ class Bucket3 extends StatelessWidget {
     return Container(
       height: 125.0,
       width: 400.0,
-      // margin: const EdgeInsets.all(20.0),
+      margin: const EdgeInsets.all(10.0),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.blueGrey,
